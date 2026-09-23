@@ -1,0 +1,9 @@
+services:
+  app:
+    build: dockerfiles/app
+    ports:
+      - "3128:3128"
+    environment:
+      - PROXY_USER=myuser
+      - PROXY_PASSWORD=mypass
+    restart: always
